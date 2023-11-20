@@ -3,29 +3,29 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
-
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
 
 ## Installation
 
-Via Composer
+**Step 1:** Use composer
 
 ```bash
 composer require smile/bank
 ```
+**Step 2:** Adding this code to Service Providers in app.php
+```bash
+ \Smile\Bank\BankServiceProvider::class,
+```
 
-## Usage
 
-## Change log
+## Swagger documentation
+[Smile Bank Swagger](www.google.com)
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
 
 ## Testing
-
 ```bash
-composer test
+ php artisan test
 ```
+
 
 ## License
 
