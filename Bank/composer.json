@@ -1,0 +1,40 @@
+{
+    "name": "smile/bank",
+    "description": "Smile It Solutions Bank",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamed Soleymani",
+            "email": "hamedslyn@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/hamedslyn/SmileBank",
+    "keywords": ["Laravel", "SmileBank"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smile\\Bank\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Smile\\Bank\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smile\\Bank\\BankServiceProvider"
+            ],
+            "aliases": {
+                "Bank": "Smile\\Bank\\Facades\\Bank"
+            }
+        }
+    }
+}
