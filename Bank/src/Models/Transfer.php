@@ -11,6 +11,11 @@ class Transfer extends Model
 {
     use SoftDeletes, HasFactory;
 
+    const TRANSFER_STATUSES = [
+        'VERIFIED'   => 'verified',
+        'UNVERIFIED' => 'unverified',
+    ];
+
     public    $timestamps = true;
     protected $fillable   = [
         'sender_account_id',
@@ -34,5 +39,15 @@ class Transfer extends Model
     protected static function newFactory()
     {
         return TransferFactory::new();
+    }
+
+    public function scopeVerified($query)
+    {
+        return $query->where('status', self::TRANSFER_STATUSES['VERIFIED']);
+    }
+
+    public function scopeUnverified($query)
+    {
+        return $query->where('status', self::TRANSFER_STATUSES['UNVERIFIED']);
     }
 }
