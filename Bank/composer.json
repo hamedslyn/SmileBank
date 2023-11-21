@@ -19,7 +19,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Smile\\Bank\\": "src/"
+            "Smile\\Bank\\": "src/",
+            "Smile\\Bank\\Database\\Factories\\": "src/Database/Factories/",
+            "Smile\\Bank\\Database\\Seeders\\": "src/Database/Seeders/"
         }
     },
     "autoload-dev": {

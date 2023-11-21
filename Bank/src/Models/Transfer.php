@@ -2,12 +2,14 @@
 
 namespace Smile\Bank\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Smile\Bank\Database\Factories\TransferFactory;
 
 class Transfer extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, HasFactory;
 
     public    $timestamps = true;
     protected $fillable   = [
@@ -27,5 +29,10 @@ class Transfer extends Model
     public function receiverAccount()
     {
         return $this->belongsTo(Account::class, 'receiver_account_id');
+    }
+
+    protected static function newFactory()
+    {
+        return TransferFactory::new();
     }
 }

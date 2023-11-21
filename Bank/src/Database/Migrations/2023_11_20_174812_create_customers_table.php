@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
-            $table->string('mobile', 11);
+            $table->string('mobile', 20);
             $table->string('email', 100);
             $table->timestamps();
             $table->softDeletes();
